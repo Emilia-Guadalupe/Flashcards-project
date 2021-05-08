@@ -1,42 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Card from './Components/Card/Card';
 import './App.css';
 
-class App extends Component {
+function App() {
 
-    constructor(props){
-      super(props);
-
-      this.state = {
-        cards: [
-          {id: 1, eng: "English", han: "Hanzi", pin: "Pinyin" },
-          {id: 2, eng: "English_2", han: "Hanzi_2", pin: "Pinyin_2"},
-        ],
-        currentCard: {}
-      }
-    }
-
-    componentWillMount(){
-      const currentCards = this.state.cards;
-
-      this.setState({
-        cards: currentCards,
-        currentCard: this.getRandomCard(currentCards)
-      })
-    }
-
-    getRandomCard(currentCards){
-      var card = currentCards[Math.floor(Math.random() * currentCards.length)];
-      return(card);
-    }
-
-    render(){
-      return(
+    return(
         <div className="App">
-            <Card eng={this.state.currentCard.eng} han={this.state.currentCard.han} pin={this.state.currentCard.pin} />
+            <div className="title-container">
+                <h1>A Flash Cards Game</h1>
+                <h2>Click on a card to reveal the secret solution</h2>
+            </div>
+            <div>
+              <Card front="2 + 2" back="4" />
+              <Card front="2 * 10" back="20" />
+              <Card front="60 / 2" back="30" />
+            </div>
         </div>
       );
-    }
 }
 
 export default App;
