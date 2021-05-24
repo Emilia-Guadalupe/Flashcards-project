@@ -1,7 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import LanguageContext from '../../Context/LanguageContext';
 import './cardStyles.css';
 
 function Card({front, back}){
+
+    const {lang} = useContext(LanguageContext); 
 
     const [face, setFace] = useState(true);
 
@@ -14,7 +17,7 @@ function Card({front, back}){
     return(
         <div className="card-container">
             <div className="card" onClick={handleClick}>
-                    {text}
+                    <p>{text}</p>
             </div>
         </div>
     )
