@@ -1,25 +1,25 @@
 import React, {createContext, useState, useEffect} from 'react';
 
-    const LanguageContext = createContext();
+const LanguageContext = createContext();
 
 function LanguageContextProvider({children}){
 
-    const [lang, setLang] = useState();
+    const [language, setLanguage] = useState([]);
+
+    const getWords = async () => {
+        const data = await fetch('https://kanjiapi.dev/v1/kanji/蛍')
+        const wordsInfo = await data.json();
+        setLanguage(wordsInfo);
+    }
 
     useEffect(() => {
-        fetch('https://kanjiapi.dev/v1/kanji/蜜')
-        .then((response) => {
-            return response.json()
-        })
-        .then((letter) => {
-            console.log(letter);
-            setLang(letter)
-        })
 
-    }, []);
+        getWords();
+
+    }, [])
 
     return(
-        <LanguageContext.Provider value={{lang}}>
+        <LanguageContext.Provider value={{language}}>
             {children}
         </LanguageContext.Provider>
     )
