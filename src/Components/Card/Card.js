@@ -1,10 +1,7 @@
-import React, { useState, useContext } from 'react';
-import LanguageContext from '../../Context/LanguageContext';
+import React, { useState } from 'react';
 import './cardStyles.css';
 
 function Card({front, back}){
-
-    const {lang} = useContext(LanguageContext); 
 
     const [face, setFace] = useState(true);
 

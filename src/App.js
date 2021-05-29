@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from './Components/Card/Card';
+import CardsContainer from './Components/CardsContainer/CardsContainer';
 import {LanguageContextProvider} from './Context/LanguageContext';
 import './App.css';
 
@@ -13,9 +13,7 @@ function App() {
             </div>
             <LanguageContextProvider>
             <div>
-              <Card front="2 + 2" back="4" />
-              <Card front="2 * 10" back="20" />
-              <Card front="60 / 2" back="30" />
+                <CardsContainer />
             </div>
             </LanguageContextProvider>
         </div>
@@ -23,3 +21,4 @@ function App() {
 }
 
 export default App;
+
