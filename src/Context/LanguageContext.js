@@ -7,7 +7,7 @@ function LanguageContextProvider({children}){
     const [language, setLanguage] = useState([]);
 
     const getWords = async () => {
-        const data = await fetch('https://kanjiapi.dev/v1/kanji/蛍')
+        const data = await fetch('https://digimon-api.vercel.app/api/digimon')
         const wordsInfo = await data.json();
         setLanguage(wordsInfo);
     }
@@ -17,6 +17,8 @@ function LanguageContextProvider({children}){
         getWords();
 
     }, [])
+
+    console.log(language)
 
     return(
         <LanguageContext.Provider value={{language}}>

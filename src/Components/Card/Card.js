@@ -15,6 +15,7 @@ function Card({front, back}){
         <div className="card-container">
             <div className="card" onClick={handleClick}>
                     <p>{text}</p>
+                    <img src={text} alt="digimon" />
             </div>
         </div>
     )

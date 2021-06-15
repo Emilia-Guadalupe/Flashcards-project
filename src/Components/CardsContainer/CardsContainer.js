@@ -1,5 +1,6 @@
 import React, {useContext} from 'react';
 import LanguageContext from '../../Context/LanguageContext';
+import Card from '../Card/Card'
 
 function CardsContainer(){
 
@@ -14,10 +15,8 @@ function CardsContainer(){
                 </>
                 ): language.map((e) => {
                 return(
-                        <div>
-                            <p>
-                                {e.kanji}
-                            </p>
+                        <div className="cardsContainer">
+                            <Card front={e.name} back={e.img} />
                         </div>
                 )
             })
