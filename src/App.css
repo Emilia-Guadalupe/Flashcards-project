@@ -1,5 +1,5 @@
 .App {
-    background-color:steelblue;
+    background-color: white;
     height: 100vh;
 }
 
@@ -12,5 +12,5 @@
 
 .title {
     font-family: 'Itim', cursive;
-    color: white;
+    color:cornflowerblue;
 }
