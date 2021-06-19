@@ -8,7 +8,7 @@ function Card({front, back}){
     return(
         <div className="card-container">
             <div className="card" onClick={() => setFace(!face)}>
-                { !face ? <p>{front}</p> : <img src={back} alt="Digimon" /> }
+                { face ? <p className="cardName">{front}</p> : <img className="cardPicture" src={back} alt="Digimon" /> }
             </div>
         </div>
     )

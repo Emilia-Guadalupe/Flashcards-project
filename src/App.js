@@ -8,8 +8,8 @@ function App() {
     return(
         <div className="App">
             <div className="title-container">
-                <h1 className="title">A Flash Cards Game</h1>
-                <h2 className="title">Click on a card to reveal the secret solution</h2>
+                <h1 className="title">Digimon Flash Cards Game</h1>
+                <h2 className="title">Can you guess the name?</h2>
             </div>
             <LanguageContextProvider>
             <div>
@@ -17,7 +17,7 @@ function App() {
             </div>
             </LanguageContextProvider>
         </div>
-      );
+    );
 }
 
 export default App;
