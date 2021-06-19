@@ -1,15 +1,15 @@
 import React, {createContext, useState, useEffect} from 'react';
 
-const LanguageContext = createContext();
+const DigimonContext = createContext();
 
-function LanguageContextProvider({children}){
+function DigimonContextProvider({children}){
 
-    const [language, setLanguage] = useState([]);
+    const [digimon, setDigimon] = useState([]);
 
     const getWords = async () => {
         const data = await fetch('https://digimon-api.vercel.app/api/digimon')
-        const wordsInfo = await data.json();
-        setLanguage(wordsInfo);
+        const digimonInfo = await data.json();
+        setDigimon(digimonInfo);
     }
 
     useEffect(() => {
@@ -18,15 +18,15 @@ function LanguageContextProvider({children}){
 
     }, [])
 
-    console.log(language)
+    console.log(digimon)
 
     return(
-        <LanguageContext.Provider value={{language}}>
+        <DigimonContext.Provider value={{digimon}}>
             {children}
-        </LanguageContext.Provider>
+        </DigimonContext.Provider>
     )
 
 }
 
-export default LanguageContext;
-export {LanguageContextProvider};
+export default DigimonContext;
+export {DigimonContextProvider};

@@ -1,6 +1,6 @@
 import React from 'react';
 import CardsContainer from './Components/CardsContainer/CardsContainer';
-import {LanguageContextProvider} from './Context/LanguageContext';
+import {DigimonContextProvider} from './Context/LanguageContext';
 import './App.css';
 
 function App() {
@@ -10,12 +10,13 @@ function App() {
             <div className="title-container">
                 <h1 className="title">Digimon Flash Cards Game</h1>
                 <h2 className="title">Can you guess the name?</h2>
+                <p className="title">Click the images and find out!</p>
             </div>
-            <LanguageContextProvider>
+            <DigimonContextProvider>
             <div>
                 <CardsContainer />
             </div>
-            </LanguageContextProvider>
+            </DigimonContextProvider>
         </div>
     );
 }
