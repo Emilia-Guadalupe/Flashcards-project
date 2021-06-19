@@ -2,3 +2,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+
+.loading {
+    color: cornflowerblue;
+    font-family: 'Itim', cursive;
+    text-align: center;
+}
