@@ -1,4 +1,14 @@
-# Getting Started with Create React App
+## What's this? 
+
+This is a very simple flashcards game. You can try to guess the name of every Digimon and click every image to reveal their names. 
+
+The idea was to make a very simple game, to practice Contexts in React and API calls. 
+
+You just need the basic 'create-react-app' to make this project work. 
+
+Have fun!
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
